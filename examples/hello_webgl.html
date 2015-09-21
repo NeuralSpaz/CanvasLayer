@@ -124,6 +124,7 @@
       function resize() {
         var width = canvasLayer.canvas.width;
         var height = canvasLayer.canvas.height;
+        canvasLayer.resize_();
 
         gl.viewport(0, 0, width, height);
 
@@ -194,6 +195,7 @@
       }
 
       document.addEventListener('DOMContentLoaded', init, false);
+      window.addEventListener("resize", resize);
     </script>
 
     <script id="pointVertexShader" type="x-shader/x-vertex">
